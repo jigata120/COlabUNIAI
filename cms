@@ -1,0 +1,15 @@
+pip install pygit2==1.15.1
+cd /content
+git clone https://github.com/lllyasviel/Fooocus.git
+cd /content/Fooocus
+git clone https://github.com/mrhan1993/Fooocus-API.git
+cd /content/Fooocus/Fooocus-API
+pip install -r requirements.txt
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
+
+cd /content/Fooocus/Fooocus-API
+
+python main.py &
+
+pip install pyngrok --quiet
+from pyngrok import ngrok
